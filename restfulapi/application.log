@@ -1,0 +1,235 @@
+2024-07-25 14:46:25,081 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 14:46:25,081 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 14:46:25,086 - INFO -  * Restarting with stat
+2024-07-25 14:46:25,899 - WARNING -  * Debugger is active!
+2024-07-25 14:46:25,911 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 14:49:02,624 - INFO -  * Detected change in 'd:\\restfulapi\\app.py', reloading
+2024-07-25 14:49:02,708 - INFO -  * Restarting with stat
+2024-07-25 14:51:21,852 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 14:51:21,852 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 14:51:21,852 - INFO -  * Restarting with stat
+2024-07-25 14:51:22,703 - WARNING -  * Debugger is active!
+2024-07-25 14:51:22,723 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 14:51:49,499 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 14:51:49,499 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 14:51:49,505 - INFO -  * Restarting with stat
+2024-07-25 14:51:51,394 - WARNING -  * Debugger is active!
+2024-07-25 14:51:51,410 - INFO -  * Debugger PIN: 139-129-112
+2024-07-25 14:52:42,213 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 14:52:42,213 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 14:52:42,221 - INFO -  * Restarting with stat
+2024-07-25 14:52:44,348 - WARNING -  * Debugger is active!
+2024-07-25 14:52:44,367 - INFO -  * Debugger PIN: 139-129-112
+2024-07-25 14:52:46,354 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 14:52:46,354 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 14:52:59,777 - INFO -  * Detected change in 'D:\\restfulapi\\app.py', reloading
+2024-07-25 14:53:00,140 - INFO -  * Detected change in 'D:\\restfulapi\\app.py', reloading
+2024-07-25 14:53:00,183 - INFO -  * Detected change in 'd:\\restfulapi\\app.py', reloading
+2024-07-25 14:53:00,281 - INFO -  * Restarting with stat
+2024-07-25 14:53:01,112 - WARNING -  * Debugger is active!
+2024-07-25 14:53:01,122 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 14:53:58,467 - INFO -  * Restarting with stat
+2024-07-25 14:54:00,442 - WARNING -  * Debugger is active!
+2024-07-25 14:54:00,455 - INFO -  * Debugger PIN: 139-129-112
+2024-07-25 14:54:01,151 - INFO -  * Restarting with stat
+2024-07-25 14:54:03,133 - WARNING -  * Debugger is active!
+2024-07-25 14:54:03,151 - INFO -  * Debugger PIN: 139-129-112
+2024-07-25 14:54:44,042 - INFO -  * Detected change in 'D:\\restfulapi\\app.py', reloading
+2024-07-25 14:54:44,548 - INFO -  * Detected change in 'D:\\restfulapi\\app.py', reloading
+2024-07-25 14:54:44,607 - INFO -  * Detected change in 'd:\\restfulapi\\app.py', reloading
+2024-07-25 14:54:44,708 - INFO -  * Restarting with stat
+2024-07-25 14:54:45,493 - WARNING -  * Debugger is active!
+2024-07-25 14:54:45,506 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 14:54:48,151 - INFO -  * Restarting with stat
+2024-07-25 14:54:50,152 - WARNING -  * Debugger is active!
+2024-07-25 14:54:50,170 - INFO -  * Debugger PIN: 139-129-112
+2024-07-25 15:13:15,101 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 15:13:15,101 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 15:13:15,103 - INFO -  * Restarting with stat
+2024-07-25 15:13:15,954 - WARNING -  * Debugger is active!
+2024-07-25 15:13:15,970 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 15:21:06,992 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 15:21:06,992 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 15:21:06,992 - INFO -  * Restarting with stat
+2024-07-25 15:21:07,811 - WARNING -  * Debugger is active!
+2024-07-25 15:21:07,824 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 15:27:27,520 - INFO -  * Detected change in 'd:\\restfulapi\\service.py', reloading
+2024-07-25 15:27:27,603 - INFO -  * Restarting with stat
+2024-07-25 15:27:28,036 - INFO -  * Detected change in 'd:\\restfulapi\\service.py', reloading
+2024-07-25 15:27:28,122 - INFO -  * Restarting with stat
+2024-07-25 15:27:28,403 - WARNING -  * Debugger is active!
+2024-07-25 15:27:28,421 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 15:27:28,906 - WARNING -  * Debugger is active!
+2024-07-25 15:27:28,918 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 15:28:38,741 - INFO -  * Detected change in 'd:\\restfulapi\\myroutes.py', reloading
+2024-07-25 15:28:38,832 - INFO -  * Restarting with stat
+2024-07-25 15:28:39,250 - INFO -  * Detected change in 'd:\\restfulapi\\myroutes.py', reloading
+2024-07-25 15:28:39,339 - INFO -  * Restarting with stat
+2024-07-25 15:28:39,670 - WARNING -  * Debugger is active!
+2024-07-25 15:28:39,682 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 15:28:40,136 - WARNING -  * Debugger is active!
+2024-07-25 15:28:40,148 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 15:30:59,310 - INFO -  * Detected change in 'd:\\restfulapi\\service.py', reloading
+2024-07-25 15:30:59,390 - INFO -  * Restarting with stat
+2024-07-25 15:30:59,776 - INFO -  * Detected change in 'd:\\restfulapi\\service.py', reloading
+2024-07-25 15:30:59,855 - INFO -  * Restarting with stat
+2024-07-25 15:31:00,187 - WARNING -  * Debugger is active!
+2024-07-25 15:31:00,197 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 15:31:00,642 - WARNING -  * Debugger is active!
+2024-07-25 15:31:00,654 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 15:31:04,690 - INFO -  * Detected change in 'd:\\restfulapi\\service.py', reloading
+2024-07-25 15:31:04,767 - INFO -  * Restarting with stat
+2024-07-25 15:31:05,242 - INFO -  * Detected change in 'd:\\restfulapi\\service.py', reloading
+2024-07-25 15:31:05,322 - INFO -  * Restarting with stat
+2024-07-25 15:31:05,540 - WARNING -  * Debugger is active!
+2024-07-25 15:31:05,550 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 15:31:06,102 - WARNING -  * Debugger is active!
+2024-07-25 15:31:06,114 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 15:40:36,051 - INFO -  * Detected change in 'd:\\restfulapi\\unit-text.py', reloading
+2024-07-25 15:40:36,136 - INFO -  * Restarting with stat
+2024-07-25 15:40:36,597 - INFO -  * Detected change in 'd:\\restfulapi\\unit-text.py', reloading
+2024-07-25 15:40:36,687 - INFO -  * Restarting with stat
+2024-07-25 15:40:36,951 - WARNING -  * Debugger is active!
+2024-07-25 15:40:36,961 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 15:40:37,468 - WARNING -  * Debugger is active!
+2024-07-25 15:40:37,480 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 15:40:42,523 - INFO -  * Detected change in 'd:\\restfulapi\\unit-text.py', reloading
+2024-07-25 15:40:42,607 - INFO -  * Restarting with stat
+2024-07-25 15:40:43,014 - INFO -  * Detected change in 'd:\\restfulapi\\unit-text.py', reloading
+2024-07-25 15:40:43,099 - INFO -  * Restarting with stat
+2024-07-25 15:40:43,396 - WARNING -  * Debugger is active!
+2024-07-25 15:40:43,414 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 15:40:43,900 - WARNING -  * Debugger is active!
+2024-07-25 15:40:43,917 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 15:40:48,954 - INFO -  * Detected change in 'd:\\restfulapi\\unit-text.py', reloading
+2024-07-25 15:40:49,044 - INFO -  * Restarting with stat
+2024-07-25 15:40:49,820 - WARNING -  * Debugger is active!
+2024-07-25 15:40:49,838 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 15:40:51,027 - DEBUG - add_alarm called with {'name': 'New Alarm', 'description': 'New alarm description'}
+2024-07-25 15:40:51,027 - DEBUG - add_alarm completed with {'name': 'New Alarm', 'description': 'New alarm description'}
+2024-07-25 15:40:51,028 - DEBUG - get_alarm called with 1
+2024-07-25 15:41:04,765 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 15:41:04,765 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 15:41:18,643 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 15:41:18,643 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 15:41:18,645 - INFO -  * Restarting with stat
+2024-07-25 15:41:19,416 - WARNING -  * Debugger is active!
+2024-07-25 15:41:19,429 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 15:42:09,183 - DEBUG - add_alarm called with {'name': 'New Alarm', 'description': 'New alarm description'}
+2024-07-25 15:42:09,183 - DEBUG - add_alarm completed with {'name': 'New Alarm', 'description': 'New alarm description'}
+2024-07-25 15:42:09,183 - DEBUG - get_alarm called with 1
+2024-07-25 15:42:21,821 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 15:42:21,821 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 15:42:35,514 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 15:42:35,514 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 15:42:45,078 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 15:42:45,078 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 15:43:07,101 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 15:43:07,101 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 15:44:13,413 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 15:44:13,414 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 15:44:13,414 - INFO -  * Restarting with stat
+2024-07-25 15:44:14,182 - WARNING -  * Debugger is active!
+2024-07-25 15:44:14,193 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 15:46:48,488 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 15:46:48,488 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 15:48:24,138 - DEBUG - add_alarm called with {'name': 'New Alarm', 'description': 'New alarm description'}
+2024-07-25 15:48:24,138 - DEBUG - add_alarm completed with {'name': 'New Alarm', 'description': 'New alarm description'}
+2024-07-25 15:48:24,138 - DEBUG - get_alarm called with 1
+2024-07-25 15:51:43,740 - INFO -  * Detected change in 'd:\\restfulapi\\unit-text.py', reloading
+2024-07-25 15:51:43,821 - INFO -  * Restarting with stat
+2024-07-25 15:51:44,637 - WARNING -  * Debugger is active!
+2024-07-25 15:51:44,651 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 16:07:57,267 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 16:07:57,267 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 16:07:57,268 - INFO -  * Restarting with stat
+2024-07-25 16:07:58,072 - WARNING -  * Debugger is active!
+2024-07-25 16:07:58,084 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 16:19:09,418 - DEBUG - add_alarm called with {'name': 'New Alarm', 'description': 'New alarm description'}
+2024-07-25 16:19:09,418 - DEBUG - add_alarm completed with {'name': 'New Alarm', 'description': 'New alarm description'}
+2024-07-25 16:19:09,418 - DEBUG - get_alarm called with 1
+2024-07-25 16:20:16,683 - DEBUG - add_alarm called with {'name': 'New Alarm', 'description': 'New alarm description'}
+2024-07-25 16:20:16,683 - DEBUG - add_alarm completed with {'name': 'New Alarm', 'description': 'New alarm description'}
+2024-07-25 16:20:16,683 - DEBUG - get_alarm called with 1
+2024-07-25 16:20:50,352 - DEBUG - add_alarm called with {'name': 'New Alarm', 'description': 'New alarm description'}
+2024-07-25 16:20:50,355 - DEBUG - add_alarm completed with {'name': 'New Alarm', 'description': 'New alarm description'}
+2024-07-25 16:20:50,358 - DEBUG - get_alarm called with 1
+2024-07-25 16:22:02,658 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 16:22:02,659 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 16:22:02,661 - INFO -  * Restarting with stat
+2024-07-25 16:22:04,611 - WARNING -  * Debugger is active!
+2024-07-25 16:22:04,633 - INFO -  * Debugger PIN: 139-129-112
+2024-07-25 16:22:20,563 - DEBUG - add_alarm called with {'name': 'New Alarm', 'description': 'New alarm description'}
+2024-07-25 16:22:20,563 - DEBUG - add_alarm completed with {'name': 'New Alarm', 'description': 'New alarm description'}
+2024-07-25 16:22:20,573 - DEBUG - get_alarm called with 1
+2024-07-25 16:32:54,229 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 16:32:54,229 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 16:32:54,231 - INFO -  * Restarting with stat
+2024-07-25 16:32:55,055 - WARNING -  * Debugger is active!
+2024-07-25 16:32:55,066 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 16:45:44,113 - INFO -  * Detected change in 'd:\\restfulapi\\myroutes.py', reloading
+2024-07-25 16:45:44,204 - INFO -  * Restarting with stat
+2024-07-25 16:45:44,385 - INFO -  * Detected change in 'd:\\restfulapi\\myroutes.py', reloading
+2024-07-25 16:45:44,519 - INFO -  * Restarting with stat
+2024-07-25 16:54:17,889 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 16:54:17,889 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 16:54:17,892 - INFO -  * Restarting with stat
+2024-07-25 16:54:18,694 - WARNING -  * Debugger is active!
+2024-07-25 16:54:18,705 - INFO -  * Debugger PIN: 116-211-309
+2024-07-25 16:54:40,139 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-25 16:54:40,139 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-25 16:54:40,140 - INFO -  * Restarting with stat
+2024-07-25 16:54:40,924 - WARNING -  * Debugger is active!
+2024-07-25 16:54:40,935 - INFO -  * Debugger PIN: 116-211-309
+2024-07-26 08:49:26,640 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-26 08:49:26,640 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-26 08:49:26,642 - INFO -  * Restarting with stat
+2024-07-26 08:49:27,420 - WARNING -  * Debugger is active!
+2024-07-26 08:49:27,436 - INFO -  * Debugger PIN: 116-211-309
+2024-07-26 10:57:31,140 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-26 10:57:31,140 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-26 10:57:31,140 - INFO -  * Restarting with stat
+2024-07-26 10:57:31,891 - WARNING -  * Debugger is active!
+2024-07-26 10:57:31,898 - INFO -  * Debugger PIN: 116-211-309
+2024-07-26 11:00:24,893 - INFO -  * Detected change in 'd:\\restfulapi\\app.py', reloading
+2024-07-26 11:00:24,973 - INFO -  * Restarting with stat
+2024-07-26 11:13:13,603 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-26 11:13:13,603 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-26 11:13:13,610 - INFO -  * Restarting with stat
+2024-07-26 11:13:14,381 - WARNING -  * Debugger is active!
+2024-07-26 11:13:14,391 - INFO -  * Debugger PIN: 116-211-309
+2024-07-26 11:15:14,526 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-26 11:15:14,526 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-26 11:15:14,529 - INFO -  * Restarting with stat
+2024-07-26 11:15:16,390 - WARNING -  * Debugger is active!
+2024-07-26 11:15:16,411 - INFO -  * Debugger PIN: 139-129-112
+2024-07-26 11:19:05,491 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-07-26 11:19:05,491 - INFO - [33mPress CTRL+C to quit[0m
+2024-07-26 11:19:05,491 - INFO -  * Restarting with stat
+2024-07-26 11:19:06,226 - WARNING -  * Debugger is active!
+2024-07-26 11:19:06,240 - INFO -  * Debugger PIN: 116-211-309
