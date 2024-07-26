@@ -4,7 +4,7 @@ from flask import Flask
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 import redis
-from myroutes import register_routes
+from myRoutes import register_routes
 
 # 插入当前文件目录到 sys.path
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
