@@ -19,7 +19,7 @@ try:
     print("成功连接到 Redis 服务器")
 except redis.ConnectionError as e:
     print(f"无法连接到 Redis 服务器: {e}")
-    # 提供更多调试信息
+    # 提供更多调试信息·
     print("请确保 Redis 服务器正在运行并监听端口 6379。")
     sys.exit(1)
 
