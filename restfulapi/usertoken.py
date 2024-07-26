@@ -42,7 +42,7 @@ def verify_credentials(id, password):
     cnx.close()
     # 如果匹配，生成Token
     if result[0] == 1:
-        return generate_token(id)
+        return True
     else:
         return False
 
@@ -55,6 +55,8 @@ def generate_token(id):
     redis_key = f"user:{id}:token_expiration"
     # 将Token的过期时间存储到Redis中
     redis_client.set(redis_key, expiration_time.timestamp())
+    # 将Token存储到Redis中
+    redis_client.set(f"user:{id}:token", token)
     return token
 
 # 获取Token
@@ -68,11 +70,15 @@ def get_token(id, password):
             expiration_time = datetime.datetime.fromtimestamp(float(expiration_timestamp))
             if expiration_time < datetime.datetime.now():
                 redis_client.delete(redis_key)
-        # 生成新的Token
-        token = generate_token(id)
-        redis_key = f"user:{id}:{password}"
-        # 将Token存储到Redis中
-        redis_client.set(redis_key, token)
+                redis_client.delete(f"user:{id}:token")
+                # 生成新的Token
+                token = generate_token(id)
+            else:
+                # 获取现有的Token
+                token = redis_client.get(f"user:{id}:token").decode('utf-8')
+        else:
+            # 生成新的Token
+            token = generate_token(id)
         return jsonify({'token': token}), 200
     else:
         return jsonify({'error': 'Invalid credentials'}), 401
