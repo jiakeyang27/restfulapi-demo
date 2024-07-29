@@ -21,6 +21,7 @@ def register_auth_blueprint(app):
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM users WHERE username = %s", (username,))
         user = cursor.fetchone()
+        conn.close()
         if user and bcrypt.checkpw(password.encode('utf-8'), user[2].encode('utf-8')):
             token = generate_token(user[0])
             return jsonify({'token': token, 'expires_in': 21600})
@@ -39,8 +40,10 @@ def register_auth_blueprint(app):
         try:
             cursor.execute("INSERT INTO users (username, password) VALUES (%s, %s)", (username, hashed_password))
             conn.commit()
+            conn.close()
             return jsonify({'message': 'User registered successfully'}), 201
         except:
+            conn.close()
             return jsonify({'error': 'User already exists'}), 400
 
     @auth_blueprint.route('/api/users/login', methods=['POST'])

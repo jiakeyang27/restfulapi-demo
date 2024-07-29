@@ -17,6 +17,7 @@ def register_alarm_blueprint(app):
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM alarm_levels")
         alarm_levels = cursor.fetchall()
+        conn.close()
         return jsonify({'alarm_levels': [{'id': row[0], 'level': row[1], 'description': row[2]} for row in alarm_levels]})
 
     @alarm_levels_blueprint.route('/api/alarm-levels/<int:id>', methods=['GET'])
@@ -27,6 +28,7 @@ def register_alarm_blueprint(app):
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM alarm_levels WHERE id = %s", (id,))
         alarm_level = cursor.fetchone()
+        conn.close()
         if alarm_level:
             return jsonify({'id': alarm_level[0], 'level': alarm_level[1], 'description': alarm_level[2]})
         return jsonify({'error': 'Alarm level not found'}), 404
@@ -43,6 +45,7 @@ def register_alarm_blueprint(app):
         cursor = conn.cursor()
         cursor.execute("INSERT INTO alarm_levels (level, description) VALUES (%s, %s)", (level, description))
         conn.commit()
+        conn.close()
         return jsonify({'id': cursor.lastrowid, 'level': level, 'description': description}), 201
 
     app.register_blueprint(alarm_levels_blueprint)
