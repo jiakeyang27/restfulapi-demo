@@ -18,6 +18,6 @@ if __name__ == '__main__':
             init_db()
             break
         except Exception as e:
-            print(e)
+            print('Database initialization failed. Retrying in 1 second...')
             time.sleep(1)
     app.run(debug=True, host=Config.APP_HOST, port=5000)

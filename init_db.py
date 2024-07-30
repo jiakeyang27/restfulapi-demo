@@ -1,4 +1,8 @@
 from models import get_db_connection
+from config import Config
+from utils.logger import get_logger
+
+logger = get_logger(Config.APP_NAME)
 
 def init_db():
     # Connect to the MySQL server
@@ -30,14 +34,12 @@ def init_db():
     # Commit the changes
     conn.commit()
 
-    # Print tables
+    # Print table info
     cursor.execute("SHOW TABLES")
     tables = cursor.fetchall()
-    print("Tables:")
-    for table in tables:
-        print(table[0])
+    logger.info(f"Tables: {tables}")
 
     # Close the cursor and connection
     cursor.close()
     conn.close()
-    print("Database initialized successfully")
+    logger.info("Database initialization successful")
