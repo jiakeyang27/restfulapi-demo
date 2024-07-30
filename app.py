@@ -20,4 +20,4 @@ if __name__ == '__main__':
         except Exception as e:
             print(e)
             time.sleep(1)
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host=Config.APP_HOST, port=5000)
