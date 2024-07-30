@@ -14,6 +14,7 @@ def get_logger(name):
     file_handler.setFormatter(formatter)
 
     # Add the file handler to the logger
+    logger.handlers.clear()
     logger.addHandler(file_handler)
 
     return logger
