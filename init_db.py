@@ -27,7 +27,17 @@ def init_db():
     """
     cursor.execute(create_alarm_levels_table)
 
-    # Commit the changes and close the connection
+    # Commit the changes
     conn.commit()
+
+    # Print tables
+    cursor.execute("SHOW TABLES")
+    tables = cursor.fetchall()
+    print("Tables:")
+    for table in tables:
+        print(table[0])
+
+    # Close the cursor and connection
     cursor.close()
     conn.close()
+    print("Database initialized successfully")
