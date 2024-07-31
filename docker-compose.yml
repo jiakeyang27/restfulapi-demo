@@ -1,0 +1,31 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: <root-password>
+      MYSQL_DATABASE: alarm_system
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  app:
+    build: .
+    container_name: flask_app
+    environment:
+      FLASK_ENV: development
+      APP_HOST: '0.0.0.0'
+      MYSQL_HOST: db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_DB: alarm_system
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+
+volumes:
+  mysql_data:
