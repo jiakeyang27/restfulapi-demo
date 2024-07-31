@@ -164,6 +164,93 @@ Adds a new alarm level. Requires token validation.
     }
     ```
 
+### 5. Update Alarm Level
+
+#### Endpoint
+`PUT /api/alarm-levels/{id}`
+
+#### Description
+Updates an existing alarm level by ID. Requires token validation.
+
+#### Request
+- **Headers:**
+  - `Authorization: Bearer your_token`
+  - `Content-Type: application/json`
+- **Path Parameters:**
+  - `id` (integer): The ID of the alarm level to update.
+- **Body:**
+  ```json
+  {
+    "level": "High",
+    "description": "Updated high severity alarm"
+  }
+  ```
+#### Response
+- **Success:**
+  - Status: `200 OK`
+  - Body:
+    ```json
+    {
+      "id": 3,
+      "level": "High",
+      "description": "Updated high severity alarm"
+    }
+    ```
+- **Failure:**
+  - Status: `401 Unauthorized`
+  - Body:
+    ```json
+    {
+      "error": "Invalid or expired token"
+    }
+    ```
+  - Status: `404 Not Found`
+  - Body:
+    ```json
+    {
+      "error": "Alarm level not found"
+    }
+    ```
+
+### 6. Delete Alarm Level
+
+#### Endpoint
+`DELETE /api/alarm-levels/{id}`
+
+#### Description
+Deletes an alarm level by ID. Requires token validation.
+
+#### Request
+- **Headers:**
+  - `Authorization: Bearer your_token`
+- **Path Parameters:**
+  - `id` (integer): The ID of the alarm level to delete.
+
+#### Response
+- **Success:**
+  - Status: `200 OK`
+  - Body:
+    ```json
+    {
+      "message": "Alarm level deleted successfully"
+    }
+    ```
+- **Failure:**
+  - Status: `401 Unauthorized`
+  - Body:
+    ```json
+    {
+      "error": "Invalid or expired token"
+    }
+    ```
+  - Status: `404 Not Found`
+  - Body:
+    ```json
+    {
+      "error": "Alarm level not found"
+    }
+    ```
+
 ### 5. User and Token Management APIs
 
 #### User Registration
@@ -238,6 +325,172 @@ Logs in a user and generates a token.
     ```json
     {
       "error": "Invalid credentials"
+    }
+    ```
+
+#### User Deletion
+
+##### Endpoint
+`DELETE /api/users/{id}`
+
+##### Description
+Deletes a user by ID. Requires token validation.
+
+##### Request
+- **Headers:**
+  - `Authorization: Bearer your_token`
+
+##### Response
+- **Success:**
+  - Status: `200 OK`
+  - Body:
+    ```json
+    {
+      "message": "User deleted successfully"
+    }
+    ```
+
+- **Failure:**
+  - Status: `401 Unauthorized`
+  - Body:
+    ```json
+    {
+      "error": "Invalid or expired token"
+    }
+    ```
+  - Status: `404 Not Found`
+  - Body:
+    ```json
+    {
+      "error": "User not found"
+    }
+    ```
+
+#### Get All Users
+
+##### Endpoint
+`GET /api/users`
+
+##### Description
+Retrieves all users. Requires token validation.
+
+##### Request
+- **Headers:**
+  - `Authorization: Bearer your_token`
+
+##### Response
+- **Success:**
+  - Status: `200 OK`
+  - Body:
+    ```json
+    {
+      "users": [
+        {
+          "id": 1,
+          "username": "user1"
+        },
+        {
+          "id": 2,
+          "username": "user2"
+        },
+        ...
+      ]
+    }
+    ```
+- **Failure:**
+  - Status: `401 Unauthorized`
+  - Body:
+    ```json
+    {
+      "error": "Invalid or expired token"
+    }
+    ```
+
+#### Get Specific User
+
+##### Endpoint
+`GET /api/users/{id}`
+
+##### Description
+Retrieves the details of a specific user by ID. Requires token validation.
+
+##### Request
+- **Headers:**
+  - `Authorization: Bearer your_token`
+- **Path Parameters:**
+  - `id` (integer): The ID of the user to retrieve.
+
+##### Response
+- **Success:**
+  - Status: `200 OK`
+  - Body:
+    ```json
+    {
+      "id": 1,
+      "username": "user1"
+    }
+    ```
+- **Failure:**
+  - Status: `401 Unauthorized`
+  - Body:
+    ```json
+    {
+      "error": "Invalid or expired token"
+    }
+    ```
+  - Status: `404 Not Found`
+  - Body:
+    ```json
+    {
+      "error": "User not found"
+    }
+    ```
+
+#### Update User
+
+##### Endpoint
+`PUT /api/users/{id}`
+
+##### Description
+Updates an existing user by ID. Requires token validation.
+
+##### Request
+- **Headers:**
+  - `Authorization: Bearer your_token`
+  - `Content-Type: application/json`
+- **Path Parameters:**
+  - `id` (integer): The ID of the user to update.
+- **Body:**
+  ```json
+  {
+    "username": "updated_user",
+    "password": "updated_password"
+  }
+  ```
+
+##### Response
+- **Success:**
+  - Status: `200 OK`
+  - Body:
+    ```json
+    {
+      "id": 1,
+      "username": "updated_user"
+    }
+    ```
+- **Failure:**
+  - Status: `401 Unauthorized`
+  - Body:
+    ```json
+    {
+      "error": "Invalid or expired token"
+    }
+    ```
+  - Status: `404 Not Found`
+  - Body:
+    ```json
+    {
+      "error": "User not found"
     }
     ```
 
