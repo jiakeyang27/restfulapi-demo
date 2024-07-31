@@ -1,9 +1,9 @@
 from flask import request, jsonify
 from functools import wraps
-import jwt
 from config import Config
 from models import get_db_connection
 from utils.logger import get_logger
+from utils.helpers import parse_token, validate_token
 
 def token_required(f):
     @wraps(f)
@@ -16,7 +16,8 @@ def token_required(f):
             logger.error('Token is missing!')
             return jsonify({'error': 'Token is missing!'}), 401
         try:
-            data = jwt.decode(token, Config.SECRET_KEY, algorithms=["HS256"])
+            assert validate_token(token) is True
+            data = parse_token(token)
             conn = get_db_connection()
             cursor = conn.cursor()
             cursor.execute("SELECT * FROM users WHERE id = %s", (data['user_id'],))
