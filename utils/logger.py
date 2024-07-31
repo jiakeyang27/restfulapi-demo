@@ -1,12 +1,13 @@
 import logging
+import logging.handlers
 
 def get_logger(name):
     # Create a logger object
     logger = logging.getLogger(name)
     logger.setLevel(logging.DEBUG)
 
-    # Create a file handler that logs messages to a file
-    file_handler = logging.FileHandler(f"{name}.log")
+    # Create a time rotated file handler
+    file_handler = logging.handlers.TimedRotatingFileHandler(f"logs/{name}.log", when="d", interval=1)
     file_handler.setLevel(logging.DEBUG)
 
     # Create a formatter object

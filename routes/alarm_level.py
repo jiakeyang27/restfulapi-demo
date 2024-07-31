@@ -36,6 +36,50 @@ def register_alarm_blueprint(app):
             return jsonify({'id': alarm_level[0], 'level': alarm_level[1], 'description': alarm_level[2]})
         logger.error(f"GET /api/alarm-levels/{id} - User ID: {current_user[0]} - Alarm level not found")
         return jsonify({'error': 'Alarm level not found'}), 404
+    
+    @alarm_levels_blueprint.route('/api/alarm-levels/<int:id>', methods=['DELETE'])
+    @token_required
+    @limiter.limit("1 per minute")
+    def delete_alarm_level(current_user, id):
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM alarm_levels WHERE id = %s", (id,))
+        alarm_level = cursor.fetchone()
+        
+        if alarm_level:
+            cursor.execute("DELETE FROM alarm_levels WHERE id = %s", (id,))
+            conn.commit()
+            conn.close()
+            logger.info(f"DELETE /api/alarm-levels/{id} - User ID: {current_user[0]}")
+            return jsonify({'message': 'Alarm level deleted successfully'})
+        
+        conn.close()
+        logger.error(f"DELETE /api/alarm-levels/{id} - User ID: {current_user[0]} - Alarm level not found")
+        return jsonify({'error': 'Alarm level not found'}), 404
+    
+    @alarm_levels_blueprint.route('/api/alarm-levels/<int:id>', methods=['PUT'])
+    @token_required
+    @limiter.limit("1 per minute")
+    def update_alarm_level(current_user, id):
+        data = request.get_json()
+        level = data['level']
+        description = data['description']
+        
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM alarm_levels WHERE id = %s", (id,))
+        alarm_level = cursor.fetchone()
+        
+        if alarm_level:
+            cursor.execute("UPDATE alarm_levels SET level = %s, description = %s WHERE id = %s", (level, description, id))
+            conn.commit()
+            conn.close()
+            logger.info(f"PUT /api/alarm-levels/{id} - User ID: {current_user[0]} - Level: {level}")
+            return jsonify({'message': 'Alarm level updated successfully'})
+        
+        conn.close()
+        logger.error(f"PUT /api/alarm-levels/{id} - User ID: {current_user[0]} - Alarm level not found")
+        return jsonify({'error': 'Alarm level not found'}), 404
 
     @alarm_levels_blueprint.route('/api/alarm-levels', methods=['POST'])
     @token_required

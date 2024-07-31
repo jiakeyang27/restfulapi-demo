@@ -26,7 +26,7 @@ def init_db():
     CREATE TABLE IF NOT EXISTS alarm_levels (
         id INT AUTO_INCREMENT PRIMARY KEY,
         level VARCHAR(255) NOT NULL,
-        description TEXT NOT NULL
+        description TEXT
     )
     """
     cursor.execute(create_alarm_levels_table)

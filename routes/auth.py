@@ -51,6 +51,36 @@ def register_auth_blueprint(app):
             conn.close()
             logger.error(f"User {username} already exists")
             return jsonify({'error': 'User already exists'}), 400
+        
+    @auth_blueprint.route('/api/users', methods=['GET'])
+    @limiter.limit("1 per minute")
+    @token_required
+    def get_all_users(current_user):
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM users")
+        users = cursor.fetchall()
+        conn.close()
+        logger.info(f"GET /api/users - User ID: {current_user[0]}")
+        return jsonify({'total': len(users), 'users': [{'id': row[0], 'username': row[1]} for row in users]})
+    
+    @auth_blueprint.route('/api/users/<int:id>', methods=['DELETE'])
+    @limiter.limit("1 per minute")
+    @token_required
+    def delete_user(current_user, id):
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM users WHERE id = %s", (id,))
+        user = cursor.fetchone()
+        if not user:
+            conn.close()
+            logger.error(f"User with ID {id} does not exist")
+            return jsonify({'error': 'User does not exist'}), 404
+        cursor.execute("DELETE FROM users WHERE id = %s", (id,))
+        conn.commit()
+        conn.close()
+        logger.info(f"DELETE /api/users/{id} - User ID: {current_user[0]}")
+        return jsonify({'message': 'User deleted successfully'})
 
     @auth_blueprint.route('/api/users/login', methods=['POST'])
     @limiter.limit("1 per minute")
