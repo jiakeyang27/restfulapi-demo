@@ -64,6 +64,44 @@ def register_auth_blueprint(app):
         logger.info(f"GET /api/users - User ID: {current_user[0]}")
         return jsonify({'total': len(users), 'users': [{'id': row[0], 'username': row[1]} for row in users]})
     
+    @auth_blueprint.route('/api/users/<int:id>', methods=['GET'])
+    @limiter.limit("1 per minute")
+    @token_required
+    def get_user(current_user, id):
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM users WHERE id = %s", (id,))
+        user = cursor.fetchone()
+        conn.close()
+        if user:
+            logger.info(f"GET /api/users/{id} - User ID: {current_user[0]}")
+            return jsonify({'id': user[0], 'username': user[1]})
+        logger.error(f"GET /api/users/{id} - User ID: {current_user[0]} - User not found")
+        return jsonify({'error': 'User not found'}), 404
+    
+    @auth_blueprint.route('/api/users/<int:id>', methods=['PUT'])
+    @limiter.limit("1 per minute")
+    @token_required
+    def update_user(current_user, id):
+        data = request.get_json()
+        username = data['username']
+        password = data['password']
+
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM users WHERE id = %s", (id,))
+        user = cursor.fetchone()
+        if not user:
+            conn.close()
+            logger.error(f"User with ID {id} does not exist")
+            return jsonify({'error': 'User does not exist'}), 404
+        hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+        cursor.execute("UPDATE users SET username = %s, password = %s WHERE id = %s", (username, hashed_password, id))
+        conn.commit()
+        conn.close()
+        logger.info(f"PUT /api/users/{id} - User ID: {current_user[0]}")
+        return jsonify({'message': 'User updated successfully'})
+
     @auth_blueprint.route('/api/users/<int:id>', methods=['DELETE'])
     @limiter.limit("1 per minute")
     @token_required
