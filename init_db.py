@@ -2,16 +2,17 @@ from models import get_db_connection
 from config import Config
 from utils.logger import get_logger
 
+# 获取日志记录器
 logger = get_logger(Config.APP_NAME)
 
 def init_db():
-    # Connect to the MySQL server
+    # 连接到MySQL服务器
     conn = get_db_connection()
 
-    # Create a cursor object to execute SQL queries
+    # 创建一个游标对象来执行SQL查询
     cursor = conn.cursor()
 
-    # Create the users table if it does not exist
+    # 如果users表不存在，则创建users表
     create_users_table = """
     CREATE TABLE IF NOT EXISTS users (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -21,7 +22,7 @@ def init_db():
     """
     cursor.execute(create_users_table)
 
-    # Create the alarm_levels table if it does not exist
+    # 如果alarm_levels表不存在，则创建alarm_levels表
     create_alarm_levels_table = """
     CREATE TABLE IF NOT EXISTS alarm_levels (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -31,15 +32,15 @@ def init_db():
     """
     cursor.execute(create_alarm_levels_table)
 
-    # Commit the changes
+    # 提交更改
     conn.commit()
 
-    # Print table info
+    # 打印表信息
     cursor.execute("SHOW TABLES")
     tables = cursor.fetchall()
     logger.info(f"Tables: {tables}")
 
-    # Close the cursor and connection
+    # 关闭游标和连接
     cursor.close()
     conn.close()
     logger.info("Database initialization successful")
